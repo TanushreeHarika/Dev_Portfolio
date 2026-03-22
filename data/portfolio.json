@@ -1,0 +1,189 @@
+{
+  "hero": {
+    "name": "Tanushree Harika",
+    "initials": "TH",
+    "roles": [
+      "B.Tech 2nd Year IT Student",
+      "Building cool things with Python",
+      "Learning DSA one problem at a time",
+      "Turning curiosity into projects"
+    ],
+    "bio": "IT student who builds things to learn things. From eye blink sensors to AI resume matchers — I figure it out as I go. Currently exploring Python, APIs, and whatever looks interesting next.",
+    "availabilityText": "Available for internships & projects",
+    "socialLinks": {
+      "github": "https://github.com/yourusername",
+      "linkedin": "https://linkedin.com/in/yourusername"
+    }
+  },
+  "about": {
+    "bioParas": [
+      "I'm a B.Tech 2nd year IT student who got into coding by building random things and Googling my way through errors. That's still how I learn — pick something, build it, figure it out.",
+      "I've built an eye blink sensor, a job-matching AI, contributed to my department website, and survived my first hackathon. Not an expert at anything yet — but genuinely curious about everything."
+    ],
+    "softSkills": [
+      {
+        "icon": "💬",
+        "title": "Communication",
+        "note": "Clear, confident & easy to talk to — genuinely my strongest suit.",
+        "highlight": true
+      },
+      {
+        "icon": "🔍",
+        "title": "Curiosity",
+        "note": "I learn by building. If it looks interesting, I try it.",
+        "highlight": false
+      },
+      {
+        "icon": "🤝",
+        "title": "Collaboration",
+        "note": "Worked with teams in hackathons & department projects.",
+        "highlight": false
+      },
+      {
+        "icon": "💪",
+        "title": "Persistence",
+        "note": "I don't give up — even when the bug makes no sense.",
+        "highlight": false
+      }
+    ],
+    "techSkills": [
+      {
+        "name": "Python",
+        "pct": 70
+      },
+      {
+        "name": "HTML / CSS",
+        "pct": 75
+      },
+      {
+        "name": "JavaScript",
+        "pct": 55
+      },
+      {
+        "name": "FastAPI / Flask",
+        "pct": 55
+      },
+      {
+        "name": "SQL / SQLite",
+        "pct": 60
+      },
+      {
+        "name": "C / C++",
+        "pct": 58
+      },
+      {
+        "name": "Git & GitHub",
+        "pct": 65
+      }
+    ],
+    "currentlyExploring": [
+      "Flask",
+      "React",
+      "API Integration",
+      "DSA",
+      "Open Source"
+    ],
+    "leetcode": {
+      "profileUrl": "https://leetcode.com/yourusername",
+      "statusText": "Actively in learning phase.",
+      "description": "Not crushing it yet, but I show up. Every problem teaches me to think better — and that's the whole point right now."
+    }
+  },
+  "projects": [
+    {
+      "num": "01",
+      "type": "AI / Python · 2024",
+      "title": "Job Matching AI",
+      "desc": "Upload your resume and get matched to relevant job listings. Built to learn API integration, file handling, and working with a real backend stack — FastAPI + SQLite.",
+      "tags": [
+        "FastAPI",
+        "SQLite",
+        "Python",
+        "Uvicorn"
+      ],
+      "link": "#",
+      "github": "https://github.com/yourusername",
+      "highlight": true
+    },
+    {
+      "num": "02",
+      "type": "Hardware + Code · 2024",
+      "title": "Eye Blink Sensor",
+      "desc": "A hardware + software project that detects eye blinks in real time. Fun to build, surprisingly tricky to get right — learned a lot about sensors and signal processing.",
+      "tags": [
+        "Python",
+        "Hardware",
+        "Sensor"
+      ],
+      "link": "#",
+      "github": "https://github.com/yourusername",
+      "highlight": false
+    },
+    {
+      "num": "03",
+      "type": "Open Source · 2024",
+      "title": "Department Website",
+      "desc": "Contributed to my IT department's official website. Small contribution, but it taught me how real codebases work — reading others' code, making clean PRs, and collaborating properly.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Git",
+        "Teamwork"
+      ],
+      "link": "#",
+      "github": "https://github.com/yourusername",
+      "highlight": false
+    }
+  ],
+  "experience": [
+    {
+      "period": "2024",
+      "role": "Hackathon Participant",
+      "company": "College Hackathon",
+      "desc": "Jumped into my first hackathon, built something under pressure with a team, and walked away with way more than I expected — mostly in terms of what I didn't know yet.",
+      "tags": [
+        "Teamwork",
+        "Problem Solving",
+        "Pressure Cooking 😅"
+      ]
+    },
+    {
+      "period": "2024",
+      "role": "Contributor — Department Website",
+      "company": "IT Department, Your College",
+      "desc": "Made a small contribution to our department's website. Less about the code, more about learning how to work in a real codebase — reading PRs, understanding structure, not breaking things.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Git",
+        "Collaboration"
+      ]
+    },
+    {
+      "period": "2023 — Present",
+      "role": "B.Tech — Information Technology",
+      "company": "Your College Name · Your City",
+      "desc": "2nd year IT student. Spending time in class, more time on personal projects, and even more time on Stack Overflow. Slowly connecting the dots between what I learn and what I build.",
+      "tags": [
+        "DSA",
+        "DBMS",
+        "OS",
+        "Networking",
+        "Python"
+      ]
+    }
+  ],
+  "contact": {
+    "email": "youremail@gmail.com",
+    "linkedinUrl": "https://linkedin.com/in/yourusername",
+    "heading": "Let's build something great.",
+    "description": "Open to internships, freelance work, collabs on projects, or just a good conversation about tech. Don't be a stranger."
+  },
+  "footer": {
+    "copyright": "© 2026 Tanushree Harika — Designed with intention.",
+    "socialLinks": {
+      "github": "https://github.com/yourusername",
+      "linkedin": "https://linkedin.com/in/yourusername"
+    }
+  }
+}
