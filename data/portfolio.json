@@ -11,8 +11,8 @@
     "bio": "IT student who builds things to learn things. From eye blink sensors to AI resume matchers — I figure it out as I go. Currently exploring Python, APIs, and whatever looks interesting next.",
     "availabilityText": "Available for internships & projects",
     "socialLinks": {
-      "github": "https://github.com/yourusername",
-      "linkedin": "https://linkedin.com/in/yourusername"
+      "github": "https://github.com/TanushreeHarika",
+      "linkedin": "https://www.linkedin.com/in/tanushree-harika-15b374323/"
     }
   },
   "about": {
@@ -92,7 +92,7 @@
   "projects": [
     {
       "num": "01",
-      "type": "AI / Python · 2024",
+      "type": "AI / Python · 2026",
       "title": "Job Matching AI",
       "desc": "Upload your resume and get matched to relevant job listings. Built to learn API integration, file handling, and working with a real backend stack — FastAPI + SQLite.",
       "tags": [
@@ -102,7 +102,7 @@
         "Uvicorn"
       ],
       "link": "#",
-      "github": "https://github.com/yourusername",
+      "github": "https://github.com/TanushreeHarika/Job-searching-AI",
       "highlight": true
     },
     {
@@ -121,9 +121,9 @@
     },
     {
       "num": "03",
-      "type": "Open Source · 2024",
+      "type": "Open Source · 2026",
       "title": "Department Website",
-      "desc": "Contributed to my IT department's official website. Small contribution, but it taught me how real codebases work — reading others' code, making clean PRs, and collaborating properly.",
+      "desc": "Contributed to my IT department's official website. Small contribution, but it taught me how real codebases work — reading others' code, making clean PRs, and collaborating properly..... \n\nwebsite link https://vits-it-alumni-portal.vercel.app",
       "tags": [
         "HTML",
         "CSS",
@@ -131,13 +131,13 @@
         "Teamwork"
       ],
       "link": "#",
-      "github": "https://github.com/yourusername",
+      "github": "https://vits-it-alumni-portal.vercel.app",
       "highlight": false
     }
   ],
   "experience": [
     {
-      "period": "2024",
+      "period": "2026",
       "role": "Hackathon Participant",
       "company": "College Hackathon",
       "desc": "Jumped into my first hackathon, built something under pressure with a team, and walked away with way more than I expected — mostly in terms of what I didn't know yet.",
@@ -162,7 +162,7 @@
     {
       "period": "2023 — Present",
       "role": "B.Tech — Information Technology",
-      "company": "Your College Name · Your City",
+      "company": "Vignan Institute of Technology & Science  · Hyderabad ",
       "desc": "2nd year IT student. Spending time in class, more time on personal projects, and even more time on Stack Overflow. Slowly connecting the dots between what I learn and what I build.",
       "tags": [
         "DSA",
@@ -174,16 +174,16 @@
     }
   ],
   "contact": {
-    "email": "youremail@gmail.com",
-    "linkedinUrl": "https://linkedin.com/in/yourusername",
+    "email": "ah1904699@gmail.com",
+    "linkedinUrl": "https://www.linkedin.com/in/tanushree-harika-15b374323/",
     "heading": "Let's build something great.",
     "description": "Open to internships, freelance work, collabs on projects, or just a good conversation about tech. Don't be a stranger."
   },
   "footer": {
     "copyright": "© 2026 Tanushree Harika — Designed with intention.",
     "socialLinks": {
-      "github": "https://github.com/yourusername",
-      "linkedin": "https://linkedin.com/in/yourusername"
+      "github": "https://github.com/TanushreeHarika",
+      "linkedin": "https://www.linkedin.com/in/tanushree-harika-15b374323/"
     }
   }
 }
