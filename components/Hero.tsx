@@ -1,9 +1,11 @@
 "use client";
 import { useEffect, useState, useRef, useCallback } from "react";
+import Image from "next/image";
 
 interface HeroData {
   name: string;
   initials: string;
+  profilePicture: string;
   roles: string[];
   bio: string;
   availabilityText: string;
@@ -341,27 +343,29 @@ export default function Hero({ data }: { data: HeroData }) {
           className={`hidden lg:flex items-center justify-center flex-shrink-0 transition-all duration-1000 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}
           style={{ transitionDelay: "800ms" }}
         >
-          <div className="relative w-[340px] h-[420px]">
+          <div className="relative w-[540px] h-[306px] md:w-[640px] md:h-[363px]">
             {/* Outer rotating dashed ring */}
             <div
-              className="absolute inset-[-20px] rounded-[2rem] border-2 border-dashed border-accent/20"
+              className="absolute inset-[-24px] rounded-[2rem] border-2 border-dashed border-accent/20"
               style={{ animation: "portraitSpin 20s linear infinite" }}
             />
 
             {/* Inner rotating ring (opposite direction) */}
             <div
-              className="absolute inset-[-10px] rounded-[1.8rem] border border-accent/10"
+              className="absolute inset-[-12px] rounded-[1.8rem] border border-accent/10"
               style={{ animation: "portraitSpin 15s linear infinite reverse" }}
             />
 
             {/* Main portrait frame */}
             <div className="absolute inset-0 rounded-[1.5rem] border-2 border-accent/30 bg-surface/50 overflow-hidden backdrop-blur-sm shadow-[0_20px_60px_rgba(200,169,110,0.08)]">
-              {/* Placeholder — replace with <Image> later */}
-              <div className="w-full h-full flex items-center justify-center">
-                <span className="font-playfair text-7xl font-black italic text-accent/15 select-none">
-                  {data.initials}
-                </span>
-              </div>
+              {/* Profile Picture */}
+              <Image
+                src={data.profilePicture}
+                alt={`${data.name}'s profile picture`}
+                fill
+                className="object-cover"
+                priority
+              />
 
               {/* Subtle gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-parchment/40 via-transparent to-transparent pointer-events-none" />

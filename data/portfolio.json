@@ -2,6 +2,7 @@
   "hero": {
     "name": "Tanushree Harika",
     "initials": "TH",
+    "profilePicture": "/profile.jpg",
     "roles": [
       "B.Tech 2nd Year IT Student",
       "Building cool things with Python",
@@ -174,7 +175,7 @@
     }
   ],
   "contact": {
-    "email": "ah1904699@gmail.com",
+    "email": "harileet100@gmail.com",
     "linkedinUrl": "https://www.linkedin.com/in/tanushree-harika-15b374323/",
     "heading": "Let's build something great.",
     "description": "Open to internships, freelance work, collabs on projects, or just a good conversation about tech. Don't be a stranger."
