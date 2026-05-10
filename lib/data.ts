@@ -7,6 +7,7 @@ export interface PortfolioData {
   hero: {
     name: string;
     initials: string;
+    profilePicture: string;
     roles: string[];
     bio: string;
     availabilityText: string;
