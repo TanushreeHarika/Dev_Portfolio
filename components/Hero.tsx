@@ -5,11 +5,11 @@ import Image from "next/image";
 interface HeroData {
   name: string;
   initials: string;
-  profilePicture: string;
   roles: string[];
   bio: string;
   availabilityText: string;
-  socialLinks: { github: string; linkedin: string };
+  profilePicture: string; // <--- Add this line here
+  socialLinks: { github: string; linkedin: string; };
 }
 
 function AnimatedLetters({
