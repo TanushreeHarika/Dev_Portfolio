@@ -9,6 +9,9 @@ export async function POST(req: NextRequest) {
     const validPass = process.env.ADMIN_PASSWORD;
     const secret = process.env.JWT_SECRET;
 
+    console.log("Received:", { username, password });
+    console.log("Expected:", { validUser, validPass });
+
     if (!validUser || !validPass || !secret) {
       return NextResponse.json(
         { error: "Server configuration error" },
