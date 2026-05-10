@@ -253,16 +253,15 @@ export default function Hero({ data }: { data: HeroData }) {
             </span>
           </div>
 
-          {/* Main heading — letter-by-letter animation */}
           <div
             className="mb-4"
             style={{ perspective: "600px" }}
           >
             <h1 className="font-playfair text-[clamp(3.5rem,9vw,8rem)] font-black leading-[0.92] tracking-tight">
-              <span className="block">
+              <span className="block whitespace-nowrap">
                 <AnimatedLetters text={firstName} mounted={mounted} startDelay={300} />
               </span>
-              <span className="block italic text-accent">
+              <span className="block italic text-accent whitespace-nowrap">
                 <AnimatedLetters text={lastName ? `${lastName}.` : `${firstName}.`} mounted={mounted} startDelay={600} />
               </span>
             </h1>
