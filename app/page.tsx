@@ -12,8 +12,8 @@ import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 import PageLoader from "@/components/PageLoader";
 
-export default function Home() {
-  const data = readData();
+export default async function Home() {
+  const data = await readData();
 
   return (
     <main>

@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const data = readData();
+    const data = await readData();
     return NextResponse.json(data);
   } catch {
     return NextResponse.json({ error: "Failed to read data" }, { status: 500 });
@@ -29,7 +29,7 @@ export async function PUT(req: NextRequest) {
 
   try {
     const data = await req.json();
-    writeData(data);
+    await writeData(data);
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json({ error: "Failed to save data" }, { status: 500 });
