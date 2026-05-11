@@ -6,8 +6,8 @@ const DATA_PATH = path.join(process.cwd(), "data", "portfolio.json");
 const KV_KEY = "portfolio-data";
 
 const kv = new Redis({
-  url: process.env.UPSTASH_REDIS_REST_URL!,
-  token: process.env.UPSTASH_REDIS_REST_TOKEN!,
+  url: process.env.KV_REST_API_URL!,
+  token: process.env.KV_REST_API_TOKEN!,
 });
 
 export interface PortfolioData {
@@ -63,9 +63,9 @@ export async function readData(): Promise<PortfolioData> {
       return JSON.parse(data as string);
     }
   } catch (error) {
-    console.warn("Failed to read from Redis, falling back to file:", error);
+    console.warn("Failed to read from Redis:", error);
   }
-  // Fallback to file
+  // Fallback to local file if database is empty
   const raw = fs.readFileSync(DATA_PATH, "utf-8");
   return JSON.parse(raw);
 }
