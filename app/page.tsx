@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import { readData } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";

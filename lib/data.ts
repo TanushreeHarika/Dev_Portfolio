@@ -5,10 +5,12 @@ import { Redis } from "@upstash/redis";
 const DATA_PATH = path.join(process.cwd(), "data", "portfolio.json");
 const KV_KEY = "portfolio-data";
 
-const kv = new Redis({
-  url: process.env.KV_REST_API_URL!,
-  token: process.env.KV_REST_API_TOKEN!,
-});
+const kv = process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN
+  ? new Redis({
+      url: process.env.KV_REST_API_URL,
+      token: process.env.KV_REST_API_TOKEN,
+    })
+  : null;
 
 export interface PortfolioData {
   hero: {
@@ -57,20 +59,25 @@ export interface PortfolioData {
 }
 
 export async function readData(): Promise<PortfolioData> {
-  try {
-    const data = await kv.get(KV_KEY);
-    if (data) {
-      return JSON.parse(data as string);
+  if (kv) {
+    try {
+      const data = await kv.get(KV_KEY);
+      if (data) {
+        return JSON.parse(data as string);
+      }
+    } catch (error) {
+      console.warn("Failed to read from Redis:", error);
     }
-  } catch (error) {
-    console.warn("Failed to read from Redis:", error);
   }
-  // Fallback to local file if database is empty
+  // Fallback to local file
   const raw = fs.readFileSync(DATA_PATH, "utf-8");
   return JSON.parse(raw);
 }
 
 export async function writeData(data: PortfolioData): Promise<void> {
+  if (!kv) {
+    throw new Error("Redis not configured");
+  }
   const json = JSON.stringify(data, null, 2);
   await kv.set(KV_KEY, json);
 }
