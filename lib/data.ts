@@ -63,7 +63,12 @@ export async function readData(): Promise<PortfolioData> {
     try {
       const data = await kv.get(KV_KEY);
       if (data) {
-        return JSON.parse(data as string);
+        if (typeof data === 'string') {
+          return JSON.parse(data);
+        } else {
+          // Data is already an object (possibly from direct Redis manipulation)
+          return data as PortfolioData;
+        }
       }
     } catch (error) {
       console.warn("Failed to read from Redis:", error);
