@@ -26,56 +26,44 @@ A polished developer portfolio built with Next.js, Tailwind CSS, and modern moti
 - Upstash Redis (optional)
 - JWT / `jose` auth helpers
 
-## 🚀 Quick Start
+## 🚀 Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000 to view the portfolio.
+The app is available locally at http://localhost:3000.
 
 ## 🔧 Environment
 
 This project works out of the box using the local content file in `data/portfolio.json`.
 
-Optional Redis-backed content editing requires these environment variables:
+Optional Redis-backed content editing is supported via:
 
 - `KV_REST_API_URL`
 - `KV_REST_API_TOKEN`
 
-If Redis is configured, the app will read portfolio data from Upstash. Otherwise it falls back to the local JSON file.
+If Redis is configured, the app reads portfolio data from Upstash; otherwise it falls back to the local JSON file.
 
-## 🗂 Content Editing
+## 🗂 Data model
 
-The site content is stored in `data/portfolio.json` and includes:
+Portfolio content is sourced from `data/portfolio.json` and includes:
 
-- hero info
-- about section text and skills
-- projects
-- experience
-- contact details
-- footer/social links
+- hero data and role cycling
+- about section copy, soft skills, and tech skills
+- project cards and external links
+- experience timeline entries
+- contact details and footer social links
 
 ### Admin editor
 
-- Public admin login page: `/login`
-- Protected admin dashboard: `/admin`
-- Content save endpoint: `/api/admin/content`
-- Auth endpoints: `/api/auth/login`, `/api/auth/check`, `/api/auth/logout`
+- public admin login page: `/login`
+- protected admin dashboard: `/admin`
+- content save endpoint: `/api/admin/content`
+- auth endpoints: `/api/auth/login`, `/api/auth/check`, `/api/auth/logout`
 
-> Note: The editor requires auth and Redis configuration to persist changes.
-
-## ✨ Customisation
-
-Update these values in `data/portfolio.json` or the admin dashboard:
-
-- `hero.name`, `hero.roles`, `hero.bio`
-- Social links for GitHub and LinkedIn
-- Project titles, descriptions, tags, and links
-- Experience entries and timelines
-- Skills, soft skills, and current learning focus
-- Contact email and CTA copy
+The editor is protected and supports authenticated content management.
 
 ## 📁 Project Structure
 
