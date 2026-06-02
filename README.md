@@ -117,8 +117,3 @@ npm run build
 npm start
 ```
 
-## 📌 Notes
-
-- Update branding references and links to reflect your own portfolio.
-- Customize UI text and theme colors in `globals.css` and the component files.
-- Keep the `data/portfolio.json` file consistent with the shape defined in `lib/data.ts`.
