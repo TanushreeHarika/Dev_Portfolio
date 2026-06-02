@@ -1,75 +1,124 @@
 # 🚀 Portfolio — Next.js + Tailwind CSS
 
-A clean, editorial developer portfolio with "Professional Gen Z meets Pinterest Aesthetic" vibes.
+A polished developer portfolio built with Next.js, Tailwind CSS, and modern motion/UI patterns. This is a full end-to-end product deployed at https://dev-portfolio-pink-eight.vercel.app, featuring a dynamic homepage, content-driven sections, and an authenticated admin editor.
 
-## ✨ Features
+## ✨ What’s Included
 
-- **Animated Navbar** — Glass morphism, active section tracking, smooth mobile hamburger menu
-- **Hero** — Typewriter role animation, live status badge, GitHub + LinkedIn links
-- **Marquee** — Infinite scrolling tech stack ticker
-- **About** — Skill bars with scroll-triggered animation, soft skills grid with Communication highlighted
-- **LeetCode callout** — Honest "learning phase" card with profile link
-- **Projects** — 3-card editorial grid with hover effects
-- **Experience** — Animated timeline
-- **Contact** — Dark section with copy-email button + LinkedIn CTA
-- **Footer** — Minimal dark footer
+- **Responsive landing page** with hero, projects, experience, skills, and contact sections
+- **Animated navbar** with section highlighting and mobile menu
+- **Typewriter text effect** in the hero section
+- **Infinite marquee** for tech stack display
+- **About section** with dynamic soft skills and animated progress bars
+- **Projects grid** with curated cards and hover interactions
+- **Experience timeline** with clean editorial layout
+- **Contact section** with email copy button and LinkedIn CTA
+- **Optional admin CMS** for editing portfolio data through `/admin`
+- **Data layer** that loads from `data/portfolio.json` or Upstash Redis when configured
 
-## 🛠 Setup
+## 🧰 Tech Stack
+
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lenis smooth scrolling
+- Upstash Redis (optional)
+- JWT / `jose` auth helpers
+
+## 🚀 Quick Start
 
 ```bash
-# 1. Create a new Next.js app (if you haven't already)
-npx create-next-app@latest my-portfolio --typescript --tailwind --eslint --app
-
-# 2. Replace the generated files with this project's files
-#    Copy all folders: app/, components/, lib/
-#    Copy config files: tailwind.config.ts, postcss.config.js, tsconfig.json
-
-# 3. Install dependencies
 npm install
-
-# 4. Run dev server
 npm run dev
 ```
 
-## 🎨 Customise
+Open http://localhost:3000 to view the portfolio.
 
-Open each component and replace:
+## 🔧 Environment
 
-| Placeholder | Replace with |
-|---|---|
-| `Your Name` / `YN` | Your real name |
-| `youremail@gmail.com` | Your email |
-| `yourusername` in GitHub links | Your GitHub username |
-| `yourusername` in LinkedIn links | Your LinkedIn handle |
-| `leetcode.com/yourusername` | Your LeetCode profile |
-| Project titles/descriptions | Your real projects |
-| Experience entries | Your real experience |
-| Skill percentages | Your honest assessment |
+This project works out of the box using the local content file in `data/portfolio.json`.
 
-## 🎨 Design System
+Optional Redis-backed content editing requires these environment variables:
 
-- **Font Display**: Playfair Display (serif, editorial)
-- **Font Body**: DM Sans (clean, modern)
-- **Font Code**: DM Mono (monospace details)
-- **Palette**: Warm cream `#F5F0E8` + ink `#0D0D0D` + gold accent `#C8A96E`
+- `KV_REST_API_URL`
+- `KV_REST_API_TOKEN`
 
-## 📁 File Structure
+If Redis is configured, the app will read portfolio data from Upstash. Otherwise it falls back to the local JSON file.
+
+## 🗂 Content Editing
+
+The site content is stored in `data/portfolio.json` and includes:
+
+- hero info
+- about section text and skills
+- projects
+- experience
+- contact details
+- footer/social links
+
+### Admin editor
+
+- Public admin login page: `/login`
+- Protected admin dashboard: `/admin`
+- Content save endpoint: `/api/admin/content`
+- Auth endpoints: `/api/auth/login`, `/api/auth/check`, `/api/auth/logout`
+
+> Note: The editor requires auth and Redis configuration to persist changes.
+
+## ✨ Customisation
+
+Update these values in `data/portfolio.json` or the admin dashboard:
+
+- `hero.name`, `hero.roles`, `hero.bio`
+- Social links for GitHub and LinkedIn
+- Project titles, descriptions, tags, and links
+- Experience entries and timelines
+- Skills, soft skills, and current learning focus
+- Contact email and CTA copy
+
+## 📁 Project Structure
 
 ```
 app/
-  layout.tsx      ← Root layout with fonts
-  page.tsx        ← Page composition
-  globals.css     ← Base styles + grain overlay
+  layout.tsx       ← root layout, fonts, metadata
+  page.tsx         ← homepage composition
+  globals.css      ← base styles and theme utilities
+  admin/           ← authenticated content editor
+  login/           ← admin login page
+  api/             ← auth and admin content routes
 components/
-  Navbar.tsx      ← Sticky nav with mobile menu
-  Hero.tsx        ← Hero with typewriter
-  Marquee.tsx     ← Tech stack ticker
-  About.tsx       ← About + skills + LeetCode
-  Projects.tsx    ← Project cards
-  Experience.tsx  ← Timeline
-  Contact.tsx     ← Contact with email copy
-  Footer.tsx      ← Footer
+  About.tsx
+  Contact.tsx
+  CustomCursor.tsx
+  DockNav.tsx
+  Experience.tsx
+  Footer.tsx
+  Hero.tsx
+  Marquee.tsx
+  Navbar.tsx
+  PageLoader.tsx
+  Projects.tsx
+  ScrollProgress.tsx
+  SmoothScroll.tsx
+  TextScramble.tsx
 lib/
-  useScrollReveal.ts  ← Intersection Observer hook
-tailwind.config.ts    ← Extended Tailwind config
+  auth.ts          ← auth helpers and token logic
+  data.ts          ← portfolio data loader/writer
+  useScrollReveal.ts← reveal hook for scroll animations
+public/
+  robots.txt
 ```
+
+## ✅ Build
+
+```bash
+npm run build
+npm start
+```
+
+## 📌 Notes
+
+- Update branding references and links to reflect your own portfolio.
+- Customize UI text and theme colors in `globals.css` and the component files.
+- Keep the `data/portfolio.json` file consistent with the shape defined in `lib/data.ts`.
